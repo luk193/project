@@ -21,6 +21,7 @@ public class Menu {
 		System.out.println("2. Lista projekt�w - godziny w danym roku");
 		System.out.println("3. Dany pracownik - projekty z liczb� godzin w danym roku");
 		System.out.println("4. Procent zaanga�owania danego pracownika w projket");
+		System.out.println("Aby wyjść wciśnij 'n'");
 		
 
 		
