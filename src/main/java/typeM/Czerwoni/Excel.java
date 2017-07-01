@@ -11,7 +11,7 @@ public class Excel {
 	public void readXLS(String path_xls) throws Exception {
 
 		HSSFSheet sheet;
-		POIFSFileSystem fs = new POIFSFileSystem(new FileInputStream("C:\\Users\\student\\Desktop\\gh.xls"));
+		POIFSFileSystem fs = new POIFSFileSystem(new FileInputStream("C:\\Users\\student\\Desktop\\Kowalski_Jan.xls"));
 		HSSFWorkbook wb = new HSSFWorkbook(fs);
 		sheet = wb.getSheetAt(0);
 		// HSSFRow row = sheet.getRow(0);
