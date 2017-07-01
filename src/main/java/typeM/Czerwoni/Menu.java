@@ -32,22 +32,18 @@ public class Menu {
 			case "1":
 				// TODO
 				System.out.println("Wybrana opcja 1");
-				repeat = false;
 				break;
 			case "2":
 				// TODO
 				System.out.println("Wybrana opcja 2");
-				repeat = false;
 				break;
 			case "3":
 				// TODO
 				System.out.println("wybrano opcje 3");
-				repeat = false;
 				break;
 			case "4":
 				// TODO
 				System.out.println("Wybrano opcje 4");
-				repeat = false;
 				break;
 			case "n":
 				// TODO
