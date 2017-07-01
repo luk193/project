@@ -10,5 +10,8 @@ public class App
     {
         Excel ss = new Excel();
         ss.readXLS("sss");
+        Menu menu = new Menu(args[0]);
+        menu.printMenu();
+        
     }
 }
