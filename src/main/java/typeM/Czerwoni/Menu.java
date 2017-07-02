@@ -67,7 +67,13 @@ public class Menu {
 			case "3":
 				// TODO
 				System.out.println("wybrano opcje 3");
-				break;
+				System.out.println("Proszę podaj pracownika: ");
+				String employee = choiceInput.nextLine();
+				System.out.println("Proszę podaj rok: ");
+				String year = choiceInput.nextLine();
+				Report3 report = new Report3(All_data, employee, year);
+		    	report.printReport();
+		    	break;
 			case "4":
 				
 				System.out.println("Wybrano opcje 4");
