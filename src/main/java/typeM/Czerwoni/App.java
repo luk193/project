@@ -1,5 +1,7 @@
 package typeM.Czerwoni;
 
+import java.util.ArrayList;
+
 /**
  * Hello world!
  *
@@ -14,4 +16,5 @@ public class App
         menu.printMenu();
         
     }
+        
 }
