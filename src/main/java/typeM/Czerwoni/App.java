@@ -1,6 +1,11 @@
 package typeM.Czerwoni;
 
 import java.util.ArrayList;
+import java.util.Date;
+import de.vandermeer.asciitable.AsciiTable;
+import typeM.Czerwoni.model.Record;
+import typeM.Czerwoni.model.Row;
+
 
 import typeM.Czerwoni.model.Record;
 
@@ -32,5 +37,11 @@ public class App {
 		menu.printMenu();
 
 	}
+
+
+
+
+    
+
 
 }
