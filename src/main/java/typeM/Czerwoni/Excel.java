@@ -28,11 +28,11 @@ public class Excel {
 
 			HSSFSheet sheet;
 			int i = 0;
-			Record simple_record = new Record();
-			try {
-			while (true) { //wb.getSheetAt(i) != null
+			
+			
+			while (i<wb.getNumberOfSheets()) { //wb.getSheetAt(i) != null
 				double h = 0;
-				
+				Record simple_record = new Record();
 				
 				
 				
@@ -69,24 +69,28 @@ public class Excel {
 			
 				
 					
-				
+					All_data.add(simple_record);
 				i++;
-				All_data.add(simple_record);
-			/*	System.out.println(simple_record.getYear());
+		/*		System.out.println(All_data.size());
+				System.out.println(simple_record.getYear());
 				System.out.println(simple_record.getMonth());
 				System.out.println(simple_record.getEmployee());
 				System.out.println(simple_record.getProject());
 				System.out.println(simple_record.getHours());*/
-			}}
-			catch(Exception e) {
-				
 			}
 			
 			
 			
 			
+			
 		}
+		/*for(Record g : All_data) {
+			System.out.println(g.getProject());
+			System.out.println(g.getEmployee());
+			System.out.println(g.getHours());
+		}*/
 		return All_data;
+		
 }
 
 }
