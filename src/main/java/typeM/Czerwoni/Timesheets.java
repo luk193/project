@@ -8,12 +8,14 @@ import java.util.Set;
 
 public class Timesheets {
 
-
+	
+	// DEBUG
 	public static void main( String[] args ) throws Exception
     {
+		
 		Timesheets timesheets = new Timesheets();
 		
-		ArrayList<String> items = timesheets.getListOfTimesheets("/home/stud/ebartosz/Documents/Timesheets");
+		Set<String> items = timesheets.getListOfYears("/home/stud/ebartosz/Documents/Timesheets");
 		//System.out.print(items);
 		for (String s : items){
 			System.out.println(s);
@@ -21,41 +23,36 @@ public class Timesheets {
         //printList(timesheets.getListOfYears("/home/stud/ebartosz/Documents/Timesheets"));
     }
 
-	private static void printList(ArrayList<String> collection) {
-		for (String item : collection){
-			System.out.println(item);
-		}
-		
-	}
 	
-	public ArrayList<String> getListOfTimesheets(String folderPath){
+	public ArrayList<String> getListOfPaths(String folderPath){
 		
 		File folder = new File(folderPath);
 		File[] listOfAllElements = folder.listFiles();
-		ArrayList<String> listOfFiles = new ArrayList<String>();
+		ArrayList<String> listOfPaths = new ArrayList<String>();
 		
 		
 		for (File file : listOfAllElements) {
 			
 			if (file.isFile() & file.getName().endsWith(".xls")) {
 				//System.out.println("absol:" + file.getAbsolutePath());
-		    	listOfFiles.add(file.getAbsolutePath());
+		    	listOfPaths.add(file.getAbsolutePath());
 		    	//System.out.println(listOfFiles);
 		    	
 		    } else if (file.isDirectory()) {		    	
-		    	listOfFiles.addAll(getListOfTimesheets(file.getAbsolutePath()));
+		    	listOfPaths.addAll(getListOfPaths(file.getAbsolutePath()));
 		    }
 		}
 //		System.out.print(listOfFiles);
-		return listOfFiles;
+		return listOfPaths;
 	}
+	
 	
 	
 	public Set<String> getListOfYears(String folderPath){
 		
 		File folder = new File(folderPath);
 		File[] listOfAllElements = folder.listFiles();
-		Set<String> listOfYears = new HashSet();
+		Set<String> listOfYears = new HashSet<String>();
 		String currentYear;
 		
 		
@@ -63,7 +60,7 @@ public class Timesheets {
 			
 			if (file.isFile() & file.getName().endsWith(".xls")) {
 		    	
-		    	currentYear = file.getAbsolutePath().replace(folderPath, "");
+		    	currentYear = file.getAbsolutePath().replace(folderPath.substring(0, folderPath.length()-7), "");
 		    	currentYear = currentYear.substring(0, 4);
 		    	listOfYears.add(currentYear);
 		    	
@@ -75,5 +72,8 @@ public class Timesheets {
 		
 		return listOfYears;
 	}
+	
+	
+	
 }	
 
