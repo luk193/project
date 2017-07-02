@@ -30,7 +30,7 @@ public class App
         	System.out.println(year);
         }
         
-        Menu menu = new Menu(args[0]);
+        Menu menu = new Menu(args[0], All_data);
         menu.printMenu();
         
     }

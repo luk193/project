@@ -1,5 +1,8 @@
 package typeM.Czerwoni;
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import typeM.Czerwoni.model.Record;
 
 
 public class Menu {
@@ -8,9 +11,11 @@ public class Menu {
 	private Scanner choiceInput = new Scanner(System.in);
 	private String pathToDir;
 	private Boolean repeat = true;
+	private ArrayList<Record> All_data;
 	
-	public Menu(String pathToDir) {
+	public Menu(String pathToDir, ArrayList<Record> All_data) {
 		this.pathToDir = pathToDir;
+		this.All_data = All_data;
 	}
 	
 	private void returnToMainMenu() {
