@@ -1,11 +1,34 @@
 package typeM.Czerwoni;
 
 import java.util.ArrayList;
+import java.util.Date;
+import de.vandermeer.asciitable.AsciiTable;
+import typeM.Czerwoni.model.Record;
+import typeM.Czerwoni.model.Row;
 
 /**
  * Hello world!
  *
  */
+<<<<<<< HEAD
+public class App 
+{
+    public static void main( String[] args ) throws Exception
+    {
+    	
+    	
+//        Excel ss = new Excel();
+//        ss.readXLS("sss");
+//        Menu menu = new Menu(args[0]);
+//        menu.printMenu();
+        
+    	BaseReport tab = new BaseReport();
+        tab.addRow(new Row("fdfas", "zz"));
+        tab.addRow(new Row("fdfas", "zz"));
+        tab.printTable();
+    }
+    
+=======
 public class App {
 	public static void main(String[] args) throws Exception {
 		Excel ss = new Excel();
@@ -30,4 +53,5 @@ public class App {
 
 	}
 
+>>>>>>> 427d74d5a898f83d3f4599e0531498f1fbb9cdea
 }

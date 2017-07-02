@@ -15,11 +15,11 @@
   </properties>
 
   <dependencies>
-  <dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi</artifactId>
-    <version>3.16</version>
-</dependency>
+  	<dependency>
+	    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi</artifactId>
+	    <version>3.16</version>
+	</dependency>
 
     <dependency>
       <groupId>junit</groupId>
@@ -32,6 +32,12 @@
 	    <groupId>org.sonarsource.scanner.maven</groupId>
 	    <artifactId>sonar-maven-plugin</artifactId>
 	    <version>3.3.0.603</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>de.vandermeer</groupId>
+	    <artifactId>asciitable</artifactId>
+	    <version>0.3.2</version>
 	</dependency>
   </dependencies>
 </project>
