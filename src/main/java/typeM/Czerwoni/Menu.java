@@ -12,6 +12,7 @@ public class Menu {
 	private String pathToDir;
 	private Boolean repeat = true;
 	private ArrayList<Record> All_data;
+//	private RaportPracownikGodzina raport1;
 	
 	public Menu(String pathToDir, ArrayList<Record> All_data) {
 		this.pathToDir = pathToDir;
@@ -28,13 +29,13 @@ public class Menu {
 	
 	public void printMenu() {
 		System.out.println("Witamy w systemie!");
-		System.out.println("Wybierz funkcjonalno��");
+		System.out.println("Wybierz funkcjonalnosc");
 		System.out.println(pathToDir);
-		System.out.println("1. Lista pracownik�w - alfabetycznie z liczb� godzin w danym roku");
-		System.out.println("2. Lista projekt�w - godziny w danym roku");
-		System.out.println("3. Dany pracownik - projekty z liczb� godzin w danym roku");
-		System.out.println("4. Procent zaanga�owania danego pracownika w projket");
-		System.out.println("Aby wyjść wciśnij 'n'");
+		System.out.println("1. Lista pracownikow - alfabetycznie z liczba godzin w danym roku");
+		System.out.println("2. Lista projektow - godziny w danym roku");
+		System.out.println("3. Dany pracownik - projekty z liczba godzin w danym roku");
+		System.out.println("4. Procent zaangazowania danego pracownika w projekt");
+		System.out.println("Aby wyjść wciśnij 'q'");
 		
 
 		
@@ -44,12 +45,14 @@ public class Menu {
 			switch (choice) {
 			case "1":
 				// TODO
-				System.out.println("Wybrana opcja 1");
-				System.out.println("Raport 1");
+				System.out.println("Wybrana opcja 1, prosze podaj rok!");
+				choice = choiceInput.nextLine().toLowerCase();
+				System.out.println("Raport 1: liczba przepracowanych godzin prezz pracownikow za rok: " + choice);
+				RaportPracownikGodzina raport1 = new RaportPracownikGodzina(All_data, choice);
+				raport1.printMap();
 				returnToMainMenu();
 				break;
 			case "2":
-				// TODO
 				System.out.println("Wybrana opcja 2");
 				System.out.println("Raport 2");
 				Scanner reader = new Scanner(System.in);  // Reading from System.in
@@ -59,6 +62,7 @@ public class Menu {
 				rep.setMapValues();
 				rep.printReport();
 				returnToMainMenu();
+				System.out.println("Wybrana opcja 2, prosze podaj rok!");
 				break;
 			case "3":
 				// TODO
@@ -68,7 +72,7 @@ public class Menu {
 				// TODO
 				System.out.println("Wybrano opcje 4");
 				break;
-			case "n":
+			case "q":
 				// TODO
 				System.out.println("Exit!");
 				repeat = false;
