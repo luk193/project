@@ -51,6 +51,14 @@ public class Menu {
 			case "2":
 				// TODO
 				System.out.println("Wybrana opcja 2");
+				System.out.println("Raport 2");
+				Scanner reader = new Scanner(System.in);  // Reading from System.in
+				System.out.println("Enter a number: ");
+				String input = reader.nextLine();
+				Report2 rep = new Report2(All_data, input);
+				rep.setMapValues();
+				rep.printReport();
+				returnToMainMenu();
 				break;
 			case "3":
 				// TODO
