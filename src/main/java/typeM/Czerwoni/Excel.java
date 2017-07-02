@@ -28,8 +28,9 @@ public class Excel {
 			int i = 0;
 			while (wb.getSheetAt(i) != null) {
 				double h = 0;
-				String year;
-				String month;
+				
+				String[] roboczy;
+				
 				
 				
 				Record simple_record = new Record();
@@ -38,7 +39,7 @@ public class Excel {
 				
 				simple_record.setProject(sheet.getSheetName());
 				
-				//nazwisko i imie do zaimplementowania
+				
 
 				for (int u = 1; u < 200; u++) {
 
@@ -49,6 +50,10 @@ public class Excel {
 					catch(Exception e) {
 						
 					}
+					roboczy = path.split("\\");
+					simple_record.setYear(roboczy[roboczy.length-3]); 
+					simple_record.setMonth(roboczy[roboczy.length-2]);
+					simple_record.setEmployee(roboczy[roboczy.length-1].substring(0, roboczy[roboczy.length-1].length()-4));
 					
 					simple_record.setHours(h);
 					
@@ -65,6 +70,12 @@ public class Excel {
 							
 						}
 					}*/
+					System.out.println(simple_record.getYear());
+					System.out.println(simple_record.getMonth());
+					System.out.println(simple_record.getEmployee());
+					System.out.println(simple_record.getProject());
+					System.out.println(simple_record.getHours());
+					
 				}
 				i++;
 				All_data.add(simple_record);
