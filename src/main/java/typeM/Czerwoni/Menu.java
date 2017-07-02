@@ -13,6 +13,14 @@ public class Menu {
 		this.pathToDir = pathToDir;
 	}
 	
+	private void returnToMainMenu() {
+		System.out.println("Wcisnij r aby powrocic do menu glownego");
+		choice = choiceInput.nextLine().toLowerCase();
+		if (choice.equals("r")) {
+			printMenu();
+		}
+	}
+	
 	public void printMenu() {
 		System.out.println("Witamy w systemie!");
 		System.out.println("Wybierz funkcjonalno��");
@@ -32,6 +40,8 @@ public class Menu {
 			case "1":
 				// TODO
 				System.out.println("Wybrana opcja 1");
+				System.out.println("Raport 1");
+				returnToMainMenu();
 				break;
 			case "2":
 				// TODO
