@@ -23,6 +23,8 @@ public class App
         	//ss.readXLS(path);
         }
         
+        ArrayList<Record> All_data = ss.readXLS(paths);
+        
         System.out.println("Raporty z lat:");
         for (String year : timesheets.getListOfYears(args[0])){
         	System.out.println(year);
