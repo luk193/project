@@ -1,6 +1,8 @@
 package typeM.Czerwoni;
 
+import java.awt.List;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -36,15 +38,21 @@ public class RaportPracownikGodzina {
 	
 	public void printMap() {
 		setReportMap();
+		ArrayList<String> sortedKeys = new ArrayList<String>(reportMap.keySet());
+		Collections.sort(sortedKeys);
+
 		
 		at.addRule();
 		at.addRow("Imie", "Godziny pracy");
 		
-		for(Map.Entry<String, Double> entry : reportMap.entrySet()) {
-		    String key = entry.getKey();
-		    Double value = entry.getValue();
+		//for(Map.Entry<String, Double> entry : reportMap.entrySet()) {
+		for(String name : sortedKeys) {
+			//String key = entry.getKey();
+			
+			Double value = reportMap.get(name);
+		    //Double value = entry.getValue();
 		    at.addRule();
-		    at.addRow(key, value);
+		    at.addRow(name, value);
 		}
 		at.addRule();
 		String rend = at.render();
