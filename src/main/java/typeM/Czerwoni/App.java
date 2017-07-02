@@ -16,8 +16,9 @@ public class App {
 		System.out.println("Wczytane raporty: ");
 		for (String path : paths) {
 			System.out.println(path);
-			ss.readXLS(paths);
+			
 		}
+		ss.readXLS(paths);
 
 		System.out.println("Raporty z lat:");
 		for (String year : timesheets.getListOfYears(args[0])) {
