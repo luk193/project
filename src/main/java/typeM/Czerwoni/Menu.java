@@ -69,8 +69,10 @@ public class Menu {
 				System.out.println("wybrano opcje 3");
 				break;
 			case "4":
-				// TODO
+				
 				System.out.println("Wybrano opcje 4");
+				
+				PrintRaport4.printReport4(All_data);
 				break;
 			case "q":
 				// TODO
