@@ -21,10 +21,14 @@ public class PrintRaport4 {
 				};
 			}
 			else {
-				HashMap<String,Double> gg = new HashMap<>(); //.put(g.getEmployee(),g.getHours());
+				HashMap<String,Double> gg = new HashMap<>();
+				gg.put(g.getEmployee(), g.getHours());
 				
-				WomboCombo.put(g.getProject(),gg.put(g.getEmployee(), g.getHours()));
+				WomboCombo.put(g.getProject(), gg);
+				
 			};
+			
+			
 			
 		}
 		
