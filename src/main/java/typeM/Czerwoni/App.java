@@ -2,6 +2,8 @@ package typeM.Czerwoni;
 
 import java.util.ArrayList;
 
+import typeM.Czerwoni.model.Record;
+
 /**
  * Hello world!
  *
@@ -18,7 +20,8 @@ public class App {
 			System.out.println(path);
 			
 		}
-		ss.readXLS(paths);
+		ArrayList<Record> All_data = ss.readXLS(paths);
+		
 
 		System.out.println("Raporty z lat:");
 		for (String year : timesheets.getListOfYears(args[0])) {
